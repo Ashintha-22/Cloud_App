@@ -29,12 +29,12 @@ const index = () => {
           source={require("../assets/Cover.png")}
           style={{
             height: 200,
-            marginTop: 60,
+            marginTop: 80,
           }}
           resizeMode="contain"
         />
       </View>
-      <Text style={{ fontWeight: "bold", fontSize: 25, paddingVertical: 60 }}>
+      <Text style={{ fontWeight: "bold", fontSize: 25, paddingVertical: 50 }}>
         Welcome
       </Text>
       <Text style={{ color: "#558" }}> Register your self to get a</Text>
@@ -57,7 +57,7 @@ const index = () => {
       <TouchableOpacity
         style={[
           styles.squareBtn,
-          { backgroundColor: "#D1D5FA", marginTop: 25 },
+          { backgroundColor: "#D1D5FA", marginTop: 15 },
         ]}
         activeOpacity={0.7}
         onPress={() => {

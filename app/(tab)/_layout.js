@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { Image } from "react-native";
 
 const TabLayout = () => {
   return (
@@ -35,13 +36,13 @@ const TabLayout = () => {
             />
           );
         },
+        //change this with users profile image
         headerRight: () => {
           return (
-            <Ionicons
-              name="search-outline"
-              size={24}
-              color="grey"
-              style={{ marginRight: 20 }}
+            <Image
+              source={require("../../assets/profile.png")}
+              resizeMode="contain"
+              style={{ width: 30, marginRight: 20 }}
             />
           );
         },
@@ -53,6 +54,8 @@ const TabLayout = () => {
         },
         tabBarLabelPosition: "below-icon",
         tabBarLabelStyle: { marginBottom: 8, marginTop: -10 },
+        tabBarActiveTintColor: "#6B3DB6",
+        tabBarInactiveTintColor: "#E6D2FF",
       }}
     >
       <Tabs.Screen
@@ -65,6 +68,7 @@ const TabLayout = () => {
             // Adjust the size value to your desired icon size
             const iconSize = 30; // Change this to your preferred size
             // You can return any component that you like here!
+            color = focused ? "#6B3DB6" : "#E6D2FF";
             return <Ionicons name={iconName} size={iconSize} color={color} />;
           },
         }}
@@ -79,6 +83,7 @@ const TabLayout = () => {
             // Adjust the size value to your desired icon size
             const iconSize = 30; // Change this to your preferred size
             // You can return any component that you like here!
+            color = focused ? "#6B3DB6" : "#E6D2FF";
             return <Ionicons name={iconName} size={iconSize} color={color} />;
           },
         }}
@@ -87,12 +92,26 @@ const TabLayout = () => {
         name="Profile/index"
         options={{
           tabBarLabel: "Profile",
+          //   tabBarIcon: ({ focused }) => {
+          //     if (focused) {
+          //       return (
+          //         <Image
+          //           source={require("../../assets/profile.gif")}
+          //           style={{ width: 35, height: 35 }}
+          //           resizeMode="contain"
+          //         />
+          //       );
+          //     } else {
+          //       return <Ionicons name={"person-circle-outline"} size={30} />;
+          //     }
+          //   },
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             iconName = focused ? "person" : "person-outline";
             // Adjust the size value to your desired icon size
             const iconSize = 30; // Change this to your preferred size
             // You can return any component that you like here!
+            color = focused ? "#6B3DB6" : "#E6D2FF";
             return <Ionicons name={iconName} size={iconSize} color={color} />;
           },
         }}

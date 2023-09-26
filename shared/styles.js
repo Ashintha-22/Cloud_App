@@ -59,6 +59,36 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 50,
   },
+  searchContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    marginTop: 10,
+    height: 50,
+    width: 370,
+    alignSelf: "center",
+  },
+  searchWrapper: {
+    flex: 1,
+    backgroundColor: "#E6D2FF",
+    alignItems: "center",
+    borderRadius: 15,
+    height: "100%",
+    flexDirection: "row",
+  },
+  searchBtn: {
+    backgroundColor: "#6B3DB6",
+    height: 50,
+    width: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 15,
+    marginLeft: 5,
+  },
+  tabsContainer: {
+    width: "100%",
+    marginTop: 10,
+  },
 });
 
 export default styles;
